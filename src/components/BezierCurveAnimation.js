@@ -1,5 +1,3 @@
-// BezierCurveAnimation.js
-
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
@@ -11,7 +9,7 @@ const BezierCurveAnimation = () => {
   });
 
   return (
-    <animated.div style={props}>
+    <animated.div style={props} className="bezier-curve">
       <h2>This is an animation with a bezier curve!</h2>
     </animated.div>
   );
