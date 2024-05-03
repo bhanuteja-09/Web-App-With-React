@@ -1,4 +1,4 @@
-.counter-box {
+/* .counter-box {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px;
@@ -22,7 +22,7 @@
 .counter-background {
   background-color: blue;
   transition: height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
+} */
 
 /* App.css */
 
@@ -37,3 +37,20 @@
   padding: 10px; /* Add padding to the counter and editor boxes */
 }
 
+.form-box,
+.user-box {
+  padding: 10px; /* Add padding to the counter and editor boxes */
+}
+
+.user-box {
+  border: 5px solid #9ca53b;
+  padding: 70px;
+  margin: 20px;
+  width: 200px;
+}
+.form-box {
+  border: 5px solid #8a8e81;
+  padding: 70px;
+  margin: 20px;
+  width: 200px;
+}
