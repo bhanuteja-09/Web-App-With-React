@@ -1,8 +1,8 @@
 .counter-container {
     position:relative; /* Ensure counter box is positioned relative */
     border: 1px solid #ccc;
-    padding: 20px;
-    margin: -20px;
+    padding: 10px;
+    margin: -10px;
     width: 200px;
     border-radius: 8px;
     overflow: hidden; /* Ensure overflow is hidden */

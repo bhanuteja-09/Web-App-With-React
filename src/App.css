@@ -44,13 +44,15 @@
 
 .user-box {
   border: 5px solid #9ca53b;
-  padding: 70px;
-  margin: 20px;
+  padding: 60px;
+  margin: 10px;
   width: 200px;
+  border-radius: 8px;
 }
 .form-box {
   border: 5px solid #8a8e81;
   padding: 70px;
   margin: 20px;
   width: 200px;
+  border-radius: 8px;
 }
