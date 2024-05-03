@@ -13,6 +13,7 @@
     border-bottom: 10px solid #46f667;
     padding: 5px;
     /* height: 350px; */
+    border-radius: 8px;
   }
   
   /* Styles for the editor content */
