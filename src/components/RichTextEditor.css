@@ -1,0 +1,22 @@
+/* RichTextEditor.css */
+
+/* Styles for the editor container */
+/* .rich-text-editor-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+  }
+   */
+  /* Styles for the toolbar */
+  .rich-text-editor-toolbar {
+    background-color: pink;
+    border-bottom: 10px solid #46f667;
+    padding: 5px;
+  }
+  
+  /* Styles for the editor content */
+  .rich-text-editor-content {
+    min-height: 200px;
+    padding: 10px;
+  }
+  

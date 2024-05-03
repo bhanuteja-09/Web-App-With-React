@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Counter from './components/Counter'; // Import the Counter component
+import RichTextEditor from './components/RichTextEditor';
+import './App.css'; // Import the CSS file
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container" > {/* Container for the layout */}
+      <div className="counter-box" style={{ width: '60%' }}> {/* Directly apply the width */}
+        {/* <div className="counter-background" style={{ height: `${count * 10}px`, width: '100%' }}> */}
+          <Counter count={count} setCount={setCount} />
+        {/* </div> */}
+      </div>
+      <div className="editor-box" style={{ width: '40%' }}> {/* Directly apply the width */}
+        <RichTextEditor />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,34 @@
+/* Add your global styles here */
+.app {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  .counter-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+  }
+  
+  .counter-content {
+    text-align: center;
+  }
+  
+  .buttons {
+    margin-top: 10px;
+  }
+  
+  .buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .counter-background {
+    background-color: blue;
+    transition: height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  
+  

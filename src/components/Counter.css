@@ -1,0 +1,49 @@
+.counter-container {
+    position:relative; /* Ensure counter box is positioned relative */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: -20px;
+    width: 200px;
+    /* border-radius: 10px; */
+    overflow: hidden; /* Ensure overflow is hidden */
+  }
+  
+  .counter-content {
+    text-align: center;
+    position: relative; /* Ensure counter content is positioned relative */
+  }
+  
+  .buttons {
+    margin-top: 10px;
+  }
+  
+  .buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .counter-background {
+    
+    position: absolute; /* Position the curve absolutely within the counter box */
+    top: 0; /* Align curve to the top */
+    left: 0; /* Align curve to the left */
+    width: 100%; /* Fill the entire width of the box */
+    height: 100%; /* Fill the entire height of the box */
+    background-color: blue; /* Background color of the curve */
+    opacity: 0.5; /* Adjust opacity as needed */
+    z-index: -1; /* Ensure curve is behind the content */
+    transition: height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add transition for background color */
+  }
+  .counter-container {
+    width: 100%;
+     /* By default, take up full width */
+  }
+  
+  @media (min-width: 768px) {
+    .counter-container {
+      width: 50%;
+      height: 100%; /* On tablets and larger screens, take up half the width */
+    }
+  }
+  
