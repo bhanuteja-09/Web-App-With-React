@@ -12,11 +12,13 @@
     background-color: pink;
     border-bottom: 10px solid #46f667;
     padding: 5px;
+    /* height: 350px; */
   }
   
   /* Styles for the editor content */
   .rich-text-editor-content {
     min-height: 200px;
     padding: 10px;
+
   }
   

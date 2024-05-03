@@ -1,35 +1,74 @@
+// UserDataForm.js
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const UserDataForm = () => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
+  const [userData, setUserData] = useState({
+    id: '',
     name: '',
     address: '',
     email: '',
     phone: '',
   });
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    // Save form data to local storage or dispatch to Redux
-    navigate('/');
-  };
-
-  const handleChange = event => {
-    const { name, value } = event.target;
-    setFormData(prevData => ({
-      ...prevData,
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData((prevUserData) => ({
+      ...prevUserData,
       [name]: value,
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const userId = generateUserId(); // Implement your logic for generating user ID
+    // Save data to local storage or Redux Toolkit
+    localStorage.setItem(userId, JSON.stringify(userData));
+    // Clear form data after submission
+    setUserData({
+      id: '',
+      name: '',
+      address: '',
+      email: '',
+      phone: '',
+    });
+  };
+
+  const generateUserId = () => {
+    // Implement your logic for generating unique user ID
+    return 'userId'; // Example: You can use UUID library or timestamp
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="name" value={formData.name} onChange={handleChange} />
-      <input type="text" name="address" value={formData.address} onChange={handleChange} />
-      <input type="email" name="email" value={formData.email} onChange={handleChange} />
-      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+      <input
+        type="text"
+        name="name"
+        value={userData.name}
+        onChange={handleChange}
+        placeholder="Name"
+      />
+      <input
+        type="text"
+        name="address"
+        value={userData.address}
+        onChange={handleChange}
+        placeholder="Address"
+      />
+      <input
+        type="email"
+        name="email"
+        value={userData.email}
+        onChange={handleChange}
+        placeholder="Email"
+      />
+      <input
+        type="tel"
+        name="phone"
+        value={userData.phone}
+        onChange={handleChange}
+        placeholder="Phone"
+      />
       <button type="submit">Submit</button>
     </form>
   );
