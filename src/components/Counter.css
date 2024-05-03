@@ -4,7 +4,7 @@
     padding: 20px;
     margin: -20px;
     width: 200px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden; /* Ensure overflow is hidden */
   }
   
