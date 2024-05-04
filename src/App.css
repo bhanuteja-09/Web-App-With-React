@@ -130,12 +130,93 @@
 .animation:hover {
   transform: translateY(-5px); /* Move animation slightly up on hover */
 }
-/* Media query for desktop view */
-@media (min-width: 768px) {
+
+/* Media queries for tablet and desktop views */
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr; /* Two equal columns for tablet and above */
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablet and above */
+  }
+
   .fixed-footer {
-    bottom: 100px; /* Increase the gap between the footer and the bottom of the viewport in desktop view */
-   width: 93%;
-   right: 60px;
-   top:620px;
+    padding: 20px 40px;
+    margin-top: -30px;
+    left: -15px;
+    /* Increase padding for desktop view */
   }
 }
+
+
+@media screen and (829px <= width <= 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr; /* Two equal columns for tablet and above */
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablet and above */
+  }
+
+  .fixed-footer {
+    padding: 20px 40px;
+    margin-top: -100px;
+    left: -15px;
+    /* Increase padding for desktop view */
+  }
+}
+
+@media screen and (410px <= width <= 637px) {
+  .container {
+    grid-template-columns: 1fr 1fr; /* Two equal columns for tablet and above */
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablet and above */
+  }
+
+  .fixed-footer {
+    padding: 20px 40px;
+    margin-top: 50px;
+    left: -15px;
+    /* Increase padding for desktop view */
+  }
+}
+
+
+@media screen and (1023px <= width <= 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr; /* Two equal columns for tablet and above */
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablet and above */
+  }
+
+  .fixed-footer {
+    padding: 20px 20px;
+    margin-bottom: -480px;
+    left: -15px;
+    /* Increase padding for desktop view */
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr fr; /* Three columns for desktop */
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns for desktop */
+  }
+  .fixed-footer {
+    padding: 20px 20px; /* Increase padding for desktop view */
+  margin-top: -180px;
+  left: 10px;
+  }
+}
+
+
