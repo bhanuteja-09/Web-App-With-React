@@ -95,6 +95,7 @@ const UserDataForm = () => {
       </div>
       <button type="submit" className="submit-btn">Add User</button>
     </form>
+    
   );
 };
 
