@@ -8,11 +8,12 @@
   padding: 20px; /* Padding around the container */
 }
 
-/* Styles for the counter box */
-.counter-box {
-  padding: 20px; /* Padding inside the counter box */
-  border: 1px solid #ccc; /* Border around the counter box */
-  border-radius: 8px; /* Border radius to make it rounded */
+/* Styles for the counter box and user box */
+.counter-box, .user-box , .form-box{
+  width: calc(90% - 0px); /* Half the container width minus half the grid gap */
+  padding: 20px; /* Padding inside the boxes */
+  border: 1px solid #ccc; /* Border around the boxes */
+  border-radius: 8px; /* Border radius to make them rounded */
 }
 
 /* Styles for the editor box */
@@ -29,20 +30,16 @@
 }
 
 /* Styles for the form box */
-.form-box {
-  width: 45%; /* Width of the form box */
-  padding: 20px; /* Padding inside the form box */
-  border: 1px solid #ccc; /* Border around the form box */
-  border-radius: 8px; /* Border radius to make it rounded */
-}
-
-/* Styles for the user information box */
-.user-box {
-  width: 45%; /* Width of the user information box */
-  padding: 20px; /* Padding inside the user information box */
-  border: 1px solid #ccc; /* Border around the user information box */
-  border-radius: 8px; /* Border radius to make it rounded */
-}
+/* .form-box {
+  width: 45%;  */
+  /* Width of the form box */
+  /* padding: 20px;  */
+  /* Padding inside the form box */
+  /* border: 1px solid #ccc;  */
+  /* Border around the form box */
+  /* border-radius: 8px;  */
+  /* Border radius to make it rounded */
+/* } */
 
 /* Styles for the footer container */
 .footer-container {
