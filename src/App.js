@@ -28,27 +28,28 @@ const App = () => {
       </div>
       <div className="user-container">
         <div className="user-box">
-          <SecondRowComponent /> {/* Replaced user information box with text editor */}
+          <SecondRowComponent /> 
         </div>
       </div>
 
+    
       <div className="fixed-footer">
-        <div className="box animation-box">
-          <SmoothAnimation />
-        </div>
-        <div className="box animation-box">
-          <FluidAnimation />
-        </div>
-        <div className="box animation-box">
-          <BezierCurveAnimation />
-        </div>
-        <div className="box animation-box">
-          <ReactSpringAnimation />
-        </div>
-        {/* <div className="box footer-box">
-          <Footer />
-        </div> */}
-      </div>
+  <div className="box animation-box smooth-animation-box">
+    <SmoothAnimation />
+  </div>
+  <div className="box animation-box fluid-animation-box">
+    <FluidAnimation />
+  </div>
+  <div className="box animation-box bezier-animation-box">
+    <BezierCurveAnimation />
+  </div>
+  <div className="box animation-box spring-animation-box">
+    <ReactSpringAnimation />
+  </div>
+  </div>
+
+
+
   
     </div>
   );

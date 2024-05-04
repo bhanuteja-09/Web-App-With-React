@@ -3,10 +3,11 @@
 /* Styles for the main container */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  grid-gap: 20px; /* Gap between columns */
-  padding: 20px; /* Padding around the container */
-}
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+} 
+
 
 /* Styles for the counter box and user box */
 .counter-box, .user-box , .form-box{
@@ -42,27 +43,84 @@
 /* } */
 
 /* Styles for the footer container */
-.footer-container {
+/* .footer-container {
   display: flex;
-  justify-content: space-between; /* Spacing between animations */
-  align-items: center; /* Align items vertically */
-  position: fixed; /* Fixed position at the bottom of the page */
-  bottom: 0; /* Align at the bottom of the viewport */
-  width: 100%; /* Full width of the viewport */
-  background-color: #f0f0f0; /* Background color of the footer */
-  padding: 20px; /* Padding inside the footer */
-  z-index: 100; /* Ensure animations are above other content */
+  justify-content: space-between;  */
+  /* Spacing between animations */
+  /* align-items: center;  */
+  /* Align items vertically */
+  /* position: fixed;  */
+  /* Fixed position at the bottom of the page */
+  /* bottom: 0;  */
+  /* Align at the bottom of the viewport */
+  /* width: 100%;  */
+  /* Full width of the viewport */
+  /* background-color: #f0f0f0;  */
+  /* Background color of the footer */
+  /* padding: 20px;  */
+  /* Padding inside the footer */
+  /* z-index: 100;  */
+  /* Ensure animations are above other content */
+/* } */
+
+
+/* Styles for the footer container */
+.fixed-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: -330px;
+  left: 20px;
+  width: 90%;
+  /* background-color: #f0f0f0; */
+  padding: 20px;
+  z-index: 100;
+  border-radius: 8px;
 }
 
 /* Styles for the footer animations */
 .animation {
-  width: 20%; /* Width of each animation */
-  text-align: center; /* Align text in the center */
-  padding: 10px; /* Padding inside each animation */
-  border-radius: 8px; /* Border radius to make animations rounded */
-  box-shadow: 0px 2px 4px rgba(160, 235, 39, 0.1); /* Add a shadow effect */
-  background-color: #ffffff; /* Background color of animations */
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(160, 235, 39, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+/* Styles for the smooth animation boxes */
+.smooth-animation-box {
+  background-color: #ffcccc;
+   /* Background color for smooth animations */
+   width: 100%;
+   border-radius: 8px;
+   text-align: center;
+}
+
+/* Styles for the fluid animation boxes */
+.fluid-animation-box {
+  background-color: #ccffcc; /* Background color for fluid animations */
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Styles for the bezier curve animation boxes */
+.bezier-animation-box {
+  background-color: #ccccff; /* Background color for bezier curve animations */
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Styles for the react-spring animation boxes */
+.spring-animation-box {
+  background-color: #ffffcc; /* Background color for react-spring animations */
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
 }
 
 /* Hover effect for animations */
