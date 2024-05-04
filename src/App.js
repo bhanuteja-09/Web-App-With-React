@@ -21,16 +21,17 @@ const App = () => {
       <div className="editor-box">
         <RichTextEditor />
       </div>
-      <div className="form-container">
-        <div className="form-box">
-          <UserDataForm />
-        </div>
-      </div>
       <div className="user-container">
         <div className="user-box">
           <SecondRowComponent /> 
         </div>
       </div>
+      <div className="form-container">
+        <div className="form-box">
+          <UserDataForm />
+        </div>
+      </div>
+      
 
     
       <div className="fixed-footer">
