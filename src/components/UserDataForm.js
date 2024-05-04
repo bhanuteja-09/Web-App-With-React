@@ -1,10 +1,8 @@
-// UserDataForm.js
-
 import React, { useState } from 'react';
+import './UserDataForm.css'; // Import CSS file for styling
 
 const UserDataForm = () => {
   const [userData, setUserData] = useState({
-    id: '',
     name: '',
     address: '',
     email: '',
@@ -21,17 +19,9 @@ const UserDataForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userId = generateUserId(); // Implement your logic for generating user ID
-    // Save data to local storage or Redux Toolkit
-    localStorage.setItem(userId, JSON.stringify(userData));
-    // Clear form data after submission
-    setUserData({
-      id: '',
-      name: '',
-      address: '',
-      email: '',
-      phone: '',
-    });
+    const userId = generateUserId();
+    saveUserData(userId);
+    clearFormData();
   };
 
   const generateUserId = () => {
@@ -39,37 +29,71 @@ const UserDataForm = () => {
     return 'userId'; // Example: You can use UUID library or timestamp
   };
 
+  const saveUserData = (userId) => {
+    localStorage.setItem(userId, JSON.stringify(userData));
+  };
+
+  const clearFormData = () => {
+    setUserData({
+      name: '',
+      address: '',
+      email: '',
+      phone: '',
+    });
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={userData.name}
-        onChange={handleChange}
-        placeholder="Name"
-      />
-      <input
-        type="text"
-        name="address"
-        value={userData.address}
-        onChange={handleChange}
-        placeholder="Address"
-      />
-      <input
-        type="email"
-        name="email"
-        value={userData.email}
-        onChange={handleChange}
-        placeholder="Email"
-      />
-      <input
-        type="tel"
-        name="phone"
-        value={userData.phone}
-        onChange={handleChange}
-        placeholder="Phone"
-      />
-      <button type="submit">Submit</button>
+    <form className="user-form" onSubmit={handleSubmit}>
+      <h2>Add New User</h2>
+      <div className="form-group">
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={userData.name}
+          onChange={handleChange}
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="address">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          value={userData.address}
+          onChange={handleChange}
+          placeholder="Enter your address"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={userData.email}
+          onChange={handleChange}
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="phone">Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={userData.phone}
+          onChange={handleChange}
+          placeholder="Enter your phone number"
+          required
+        />
+      </div>
+      <button type="submit" className="submit-btn">Add User</button>
     </form>
   );
 };
