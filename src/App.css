@@ -1,88 +1,74 @@
-/* .counter-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px;
-  width: 200px;
-}
-
-.counter-content {
-  text-align: center;
-}
-
-.buttons {
-  margin-top: 10px;
-}
-
-.buttons button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.counter-background {
-  background-color: blue;
-  transition: height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-} */
-
 /* App.css */
 
+/* Styles for the main container */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Both columns take up equal space */
-  grid-gap: 10px; /* Add a small gap between columns */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-gap: 20px; /* Gap between columns */
+  padding: 20px; /* Padding around the container */
 }
 
-.counter-box,
+/* Styles for the counter box */
+.counter-box {
+  padding: 20px; /* Padding inside the counter box */
+  border: 1px solid #ccc; /* Border around the counter box */
+  border-radius: 8px; /* Border radius to make it rounded */
+}
+
+/* Styles for the editor box */
 .editor-box {
-  padding: 10px; /* Add padding to the counter and editor boxes */
+  padding: 10px; /* Padding inside the editor box */
+  border: 1px solid #ccc; /* Border around the editor box */
+  border-radius: 8px; /* Border radius to make it rounded */
 }
 
-.form-box,
-.user-box {
-  padding: 10px; /* Add padding to the counter and editor boxes */
+/* Styles for the form container */
+.form-container {
+  display: flex;
+  justify-content: space-between; /* Spacing between form and user information */
 }
 
-.user-box {
-  border: 5px solid #9ca53b;
-  padding: 60px;
-  margin: 10px;
-  width: 200px;
-  border-radius: 8px;
-}
+/* Styles for the form box */
 .form-box {
-  border: 5px solid #8a8e81;
-  padding: 70px;
-  margin: 20px;
-  width: 200px;
-  border-radius: 8px;
+  width: 45%; /* Width of the form box */
+  padding: 20px; /* Padding inside the form box */
+  border: 1px solid #ccc; /* Border around the form box */
+  border-radius: 8px; /* Border radius to make it rounded */
 }
-/* App.css */
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+/* Styles for the user information box */
+.user-box {
+  width: 45%; /* Width of the user information box */
+  padding: 20px; /* Padding inside the user information box */
+  border: 1px solid #ccc; /* Border around the user information box */
+  border-radius: 8px; /* Border radius to make it rounded */
 }
+
+/* Styles for the footer container */
 .footer-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Spacing between animations */
+  align-items: center; /* Align items vertically */
+  position: fixed; /* Fixed position at the bottom of the page */
+  bottom: 0; /* Align at the bottom of the viewport */
+  width: 100%; /* Full width of the viewport */
+  background-color: #f0f0f0; /* Background color of the footer */
+  padding: 20px; /* Padding inside the footer */
+  z-index: 100; /* Ensure animations are above other content */
 }
 
-.animation-row {
-  flex: 1;
-  margin-bottom: 20px; /* Add some spacing between rows */
+/* Styles for the footer animations */
+.animation {
+  width: 20%; /* Width of each animation */
+  text-align: center; /* Align text in the center */
+  padding: 10px; /* Padding inside each animation */
+  border-radius: 8px; /* Border radius to make animations rounded */
+  box-shadow: 0px 2px 4px rgba(160, 235, 39, 0.1); /* Add a shadow effect */
+  background-color: #ffffff; /* Background color of animations */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
-/* BezierCurveAnimation.css */
-
-/* .bezier-curve {
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-} */
-
+/* Hover effect for animations */
+.animation:hover {
+  transform: translateY(-5px); /* Move animation slightly up on hover */
+}
