@@ -71,13 +71,16 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: -330px;
-  left: 7px;
-  width: calc(100% - 60px); /* Adjusted width to account for left and right padding */
+  /* bottom: -100px; */
+  top: 800px;
+  left: px;
+  right: 7px;
+  width: 93%;
   padding: 20px;
-  z-index: 100;
+  z-index: 1000; /* Increase z-index to ensure it's above other content */
   border-radius: 8px;
 }
+
 
 /* Styles for the footer animations */
 .animation {
@@ -130,7 +133,9 @@
 /* Media query for desktop view */
 @media (min-width: 768px) {
   .fixed-footer {
-    bottom: -100px; /* Increase the gap between the footer and the bottom of the viewport in desktop view */
+    bottom: 100px; /* Increase the gap between the footer and the bottom of the viewport in desktop view */
    width: 93%;
+   right: 60px;
+   top:600px;
   }
 }
