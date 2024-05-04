@@ -1,4 +1,4 @@
-1.Project Setup: Created a React project using create-react-app or similar tool.
+<!-- 1.Project Setup: Created a React project using create-react-app or similar tool.
 
 2.Components: Created reusable React components like UserDataForm and UserDataDisplay for managing user data input and display.
 
@@ -20,4 +20,4 @@
 Overall, you've built a basic React application that allows users to input and display their data, persistently storing it in the browser's local storage, and provided documentation for users and contributors to understand the project structure and how to use it.1.
 
 My GitHub Repository Link: https://github.com/bhanuteja-09/Web-App-With-React.git
-
+ -->
