@@ -4,14 +4,14 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 15px;
   padding: 20px;
 } 
 
 
 /* Styles for the counter box and user box */
 .counter-box, .user-box , .form-box{
-  width: calc(90% - 0px); /* Half the container width minus half the grid gap */
+  width: calc(90% - 20px); /* Half the container width minus half the grid gap */
   padding: 20px; /* Padding inside the boxes */
   border: 1px solid #ccc; /* Border around the boxes */
   border-radius: 8px; /* Border radius to make them rounded */
@@ -22,6 +22,7 @@
   padding: 10px; /* Padding inside the editor box */
   border: 1px solid #ccc; /* Border around the editor box */
   border-radius: 8px; /* Border radius to make it rounded */
+  width: calc(90% - 0px); /* Half the container width minus half the grid gap */
 }
 
 /* Styles for the form container */
@@ -71,9 +72,8 @@
   align-items: center;
   position: absolute;
   bottom: -330px;
-  left: 20px;
-  width: 90%;
-  /* background-color: #f0f0f0; */
+  left: 7px;
+  width: calc(100% - 60px); /* Adjusted width to account for left and right padding */
   padding: 20px;
   z-index: 100;
   border-radius: 8px;
@@ -126,4 +126,11 @@
 /* Hover effect for animations */
 .animation:hover {
   transform: translateY(-5px); /* Move animation slightly up on hover */
+}
+/* Media query for desktop view */
+@media (min-width: 768px) {
+  .fixed-footer {
+    bottom: -100px; /* Increase the gap between the footer and the bottom of the viewport in desktop view */
+   width: 93%;
+  }
 }
